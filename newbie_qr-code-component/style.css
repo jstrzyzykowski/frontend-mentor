@@ -48,14 +48,17 @@
 
 html {
   font-family: var(--ff-base);
+  overflow: hidden;
 }
 
 body {
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .container {
-  height: 100vh;
+  min-height: 100vh;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
