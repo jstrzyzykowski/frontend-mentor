@@ -43,6 +43,7 @@
   --fw-medium: 500;
   --fw-semibold: 600;
   --fw-bold: 700;
+  --fw-extrabold: 800;
   --fw-black: 900;
 
   /* Line Heights */
@@ -172,7 +173,7 @@ body {
 .blogCard__title {
   font-size: clamp(var(--title-fs-min), 18.6px + 0.375vw, var(--title-fs-max));
   line-height: var(--lh-150);
-  font-weight: var(--fw-bold);
+  font-weight: var(--fw-extrabold);
   letter-spacing: var(--ls-default);
   transition: color var(--transition-fast);
 }
@@ -193,6 +194,13 @@ body {
   display: flex;
   align-items: center;
   column-gap: var(--content-gap);
+}
+
+.author__name {
+  font-weight: var(--fw-extrabold);
+  letter-spacing: var(--ls-default);
+  line-height: var(--lh-150);
+  font-size: var(--fs-sm);
 }
 
 .author__avatar {
