@@ -1,0 +1,202 @@
+@font-face {
+  font-family: 'Figtree';
+  src: url('./assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 300 900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  --clr-yellow: hsl(47, 88%, 63%);
+  --clr-gray-950: hsl(0, 0%, 7%);
+  --clr-gray-500: hsl(0, 0%, 42%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  /* Typography */
+  --ff-base: 'Figtree', sans-serif;
+  
+  /* Font Sizes: Static */
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.5rem;
+  
+  /* Font Sizes: Responsive (Min) */
+  --badge-fs-min: 12px;
+  --date-fs-min: 12px;
+  --title-fs-min: 20px;
+  --description-fs-min: 14px;
+  
+  /* Font Sizes: Responsive (Max) */
+  --badge-fs-max: 14px;
+  --date-fs-max: 14px;
+  --title-fs-max: 24px;
+  --description-fs-max: 16px;
+
+  /* Font Weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  /* Line Heights */
+  --lh-150: 1.5;
+
+  /* Letter Spacing */
+  --ls-default: 0px;
+
+  /* Spacing */
+  --space-50: 0.25rem;
+  --space-100: 0.5rem;
+  --space-150: 0.75rem;
+  --space-300: 1.5rem;
+
+  /* Layout */
+  --footer-height: 2rem;
+  --card-width-min: 327px;
+  --card-width-max: 384px;
+
+  /* Component Dimensions */
+  --avatar-size: 32px;
+  --card-padding: 24px;
+  --card-gap: 24px;
+  --content-gap: 12px;
+  --badge-padding-block: 4px;
+  --badge-padding-inline: 12px;
+  --card-image-height: 200px;
+
+  /* Borders */
+  --border-card: 1px solid var(--clr-gray-950);
+  --border-radius-sm: 4px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 20px;
+
+  /* Effects */
+  --shadow-card: 8px 8px 0 0 var(--clr-gray-950);
+  --transition-fast: 100ms ease-in-out;
+
+  /* Breakpoints */
+  --bp-desktop: 1440px;
+}
+
+html {
+  font-family: var(--ff-base);
+  color: var(--clr-gray-950);
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--clr-yellow);
+}
+
+.container {
+  min-height: 100vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.blogCard {
+  width: clamp(var(--card-width-min), 307px + 5.35vw, var(--card-width-max));
+  background-color: var(--clr-white);
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--card-gap);
+  border-radius: var(--border-radius-lg);
+  padding: var(--card-padding);
+  border: var(--border-card);
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+}
+
+.blogCard:hover .blogCard__title,
+.blogCard:focus .blogCard__title {
+  color: var(--clr-yellow);
+}
+
+.blogCard__header {
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  height: var(--card-image-height);
+  width: 100%;
+}
+
+.blogCard__image {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.blogCard__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--content-gap);
+  align-items: flex-start;
+}
+
+.badge {
+  display: inline-block;
+  padding: var(--badge-padding-block) var(--badge-padding-inline);
+  border-radius: var(--border-radius-sm);
+}
+
+.badge-yellow {
+  background-color: var(--clr-yellow);
+}
+
+.badge__text {
+  font-weight: var(--fw-bold);
+  font-size: clamp(var(--badge-fs-min), 11.3px + 0.19vw, var(--badge-fs-max));
+  line-height: var(--lh-150);
+  letter-spacing: var(--ls-default);
+}
+
+.blogCard__date {
+  font-size: clamp(var(--date-fs-min), 11.3px + 0.19vw, var(--date-fs-max));
+  line-height: var(--lh-150);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-default);
+}
+
+.blogCard__title {
+  font-size: clamp(var(--title-fs-min), 18.6px + 0.375vw, var(--title-fs-max));
+  line-height: var(--lh-150);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-default);
+  transition: color var(--transition-fast);
+}
+
+.blogCard__description {
+  font-size: clamp(var(--description-fs-min), 13.3px + 0.19vw, var(--description-fs-max));
+  line-height: var(--lh-150);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-default);
+  color: var(--clr-gray-500);
+}
+
+.blogCard__footer {
+  align-self: flex-start;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  column-gap: var(--content-gap);
+}
+
+.author__avatar {
+  display: block;
+  height: var(--avatar-size);
+  width: var(--avatar-size);
+}
