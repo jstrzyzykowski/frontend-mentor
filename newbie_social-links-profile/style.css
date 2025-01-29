@@ -90,16 +90,10 @@ body {
   transition: width 600ms cubic-bezier(0.16, 1, 0.3, 1), padding 600ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@container (min-width: 768px) {
-  .socialCard {
-    width: 456px;
-    padding: var(--space-500);
-  }
-}
-
 @container (min-width: 1440px) {
   .socialCard {
-    width: 384px; 
+    width: 384px;
+    padding: var(--space-500);
   }
 }
 
