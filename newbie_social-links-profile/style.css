@@ -1,0 +1,186 @@
+@font-face {
+  font-family: "Inter";
+  src: url(./assets/fonts/Inter-VariableFont_slnt\,wght.ttf) format('truetype-variations');
+  font-weight: 100 900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-grey-900: hsl(0, 0%, 8%);
+  --clr-grey-800: hsl(0, 0%, 12%);
+  --clr-grey-700: hsl(0, 0%, 20%);
+  --clr-green: hsl(75, 94%, 57%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --ff-primary: "Inter", sans-serif;
+  --lh-normal: 150%;
+  --ls-none: 0px;
+
+  --fs-lg: 1.5rem;
+  --fs-base: 0.875rem;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --text-preset-1: var(--fw-bold) var(--fs-lg)/var(--lh-normal) var(--ff-primary);
+  --text-preset-2: var(--fw-regular) var(--fs-base)/var(--lh-normal) var(--ff-primary);
+  --text-preset-3: var(--fw-bold) var(--fs-base)/var(--lh-normal) var(--ff-primary);
+ 
+  --space-50: 0.25rem;
+  --space-100: 0.5rem;
+  --space-150: 0.75rem;
+  --space-200: 1rem;
+  --space-300: 1.5rem;
+  --space-500: 2.5rem;
+ 
+  --button-padding: var(--space-150);
+  --button-border-radius: 0.5rem;
+  
+  --button-font: var(--text-preset-3);
+  
+  --button-bg-color: var(--clr-grey-700);
+  --button-text-color: var(--clr-white);
+  --button-hover-bg-color: var(--clr-green);
+  --button-hover-text-color: var(--clr-grey-700);
+  
+  --button-transition-duration: 200ms;
+  --button-transition-timing: ease-in-out;
+
+  --avatar-size: 88px;
+  --avatar-border-radius: 50%;
+}
+
+html {
+  font-size: 16px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ff-primary);
+  line-height: var(--lh-normal);
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--clr-grey-900);
+  color: var(--clr-white);
+}
+
+.container {
+  min-height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-300);
+  container-type: inline-size;
+}
+
+.socialCard {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-300);
+  background-color: var(--clr-grey-800);
+  padding: var(--space-300);
+  border-radius: var(--space-150);
+  width: 327px;
+  transition: width 600ms cubic-bezier(0.16, 1, 0.3, 1), padding 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@container (min-width: 768px) {
+  .socialCard {
+    width: 456px;
+    padding: var(--space-500);
+  }
+}
+
+@container (min-width: 1440px) {
+  .socialCard {
+    width: 384px; 
+  }
+}
+
+.socialCard__header {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-300);
+  align-items: center;
+}
+
+.socialCard__avatar {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+}
+
+.socialCard__avatar img {
+  display: block;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  object-fit: cover;
+  border-radius: var(--avatar-border-radius);
+}
+
+.socialCard__user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: var(--space-50);
+}
+
+.socialCard__name {
+  font: var(--text-preset-1);
+}
+
+.socialCard__location {
+  font: var(--text-preset-3);
+  color: var(--clr-green);
+}
+
+.socialCard__description {
+  font: var(--text-preset-2);
+}
+
+.socialCard__links {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-200);
+}
+
+.socialCard__link {
+  text-align: center;
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  background-color: var(--clr-grey-700);
+  color: var(--button-text-color);
+  text-decoration: none;
+  font: var(--button-font);
+}
+
+.socialCard__link:hover {
+  animation: buttonHoverIn 600ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.socialCard__link:not(:hover) {
+  animation: buttonHoverOut 600ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes buttonHoverIn {
+  to {
+    background-color: var(--clr-green);
+    color: var(--clr-grey-700);
+  }
+}
+
+@keyframes buttonHoverOut {
+  from {
+    background-color: var(--clr-green);
+    color: var(--clr-grey-700);
+  }
+  to {
+    background-color: var(--clr-grey-700);
+    color: var(--button-text-color);
+  }
+}
