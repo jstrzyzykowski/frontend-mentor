@@ -1,0 +1,240 @@
+@font-face {
+  font-family: "Outfit";
+  src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Young-Serif";
+  src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--clr-stone-100);
+}
+
+:root {
+  --clr-rose-800: hsl(332, 51%, 32%);
+  --clr-rose-50: hsl(330, 100%, 98%);
+  --clr-stone-900: hsl(24, 5%, 18%);
+  --clr-stone-600: hsl(30, 10%, 34%);
+  --clr-stone-150: hsl(30, 18%, 87%);
+  --clr-stone-100: hsl(30, 54%, 90%);
+  --clr-brown-800: hsl(14, 45%, 36%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --fs-40: 2.5rem;
+  --fs-36: 2.25rem;
+  --fs-28: 1.75rem;
+  --fs-20: 1.25rem;
+  --fs-16: 1rem;
+
+  --lh-100: 100%;
+  --lh-150: 150%;
+  --ls-none: 0px;
+
+  --ff-primary: "Young-Serif", sans-serif;
+  --ff-secondary: "Outfit", sans-serif;
+
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --text-preset-1: var(--fw-regular) var(--fs-40)/var(--lh-100) var(--ff-primary);
+  --text-preset-2: var(--fw-regular) var(--fs-28)/var(--lh-100) var(--ff-primary);
+  --text-preset-3: var(--fw-semibold) var(--fs-20)/var(--lh-100) var(--ff-secondary);
+  --text-preset-4: var(--fw-regular) var(--fs-16)/var(--lh-150) var(--ff-secondary);
+  --text-preset-4-bold: var(--fw-bold) var(--fs-16)/var(--lh-150) var(--ff-secondary);
+  --mobile-text-preset-1: var(--fw-regular) var(--fs-36)/var(--lh-100) var(--ff-primary);
+
+  --space-1600: 8rem;
+  --space-600: 3rem;
+  --space-500: 2.5rem;
+  --space-400: 2rem;
+  --space-300: 1.5rem;
+  --space-200: 1rem;
+  --space-150: 0.75rem;
+  --space-100: 0.5rem;
+
+  --br-12: 0.75rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  container-type: inline-size;
+}
+
+h2 {
+  font: var(--text-preset-2);
+  color: var(--clr-brown-800);
+}
+
+ol, ul {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-block: var(--space-100);
+  padding-left: 1rem;
+}
+
+li::marker {
+  color: var(--clr-rose-800);
+}
+
+li:first-child {
+  margin-block-start: 0;
+}
+
+li:last-child {
+  margin-block-end: 0;
+}
+
+li span {
+  font-weight: var(--fw-bold);
+  color: var(--clr-stone-600);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-300);
+}
+
+.section--sm {
+  row-gap: var(--space-200);
+}
+
+.recipe {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-white);
+  max-width: 100vw;
+  max-width: 100dvw;
+}
+
+@container (min-width: 768px) {
+  .recipe {
+    margin: 128px 48px;
+    padding: 40px;
+    border-radius: 24px;
+    max-width: 736px;
+  }
+}
+
+.recipe__hero {
+  height: 171px;
+  width: 100%;
+}
+
+@container (min-width: 768px) {
+  .recipe__hero {
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+}
+
+.recipe__hero img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.recipe__body {
+  --body-text: var(--text-preset-4);
+  --body-color: var(--clr-stone-600);
+
+  font: var(--body-text);
+  color: var(--body-color);
+  padding: var(--space-500) var(--space-400);
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-400);
+}
+
+@container (min-width: 768px) {
+  .recipe__body {
+    padding: var(--space-500) 0;
+  }
+}
+
+.recipe__header h1 {
+  font: var(--mobile-text-preset-1);
+  letter-spacing: var(--ls-none);
+  color: var(--clr-stone-900);
+}
+
+.recipe__header p {
+  letter-spacing: var(--ls-none);
+}
+
+.recipe__preparationTime {
+  padding: var(--space-300);
+  background-color: var(--clr-rose-50);
+  border-radius: var(--br-12);
+}
+
+.recipe__preparationTime h3 {
+  font: var(--text-preset-3);
+  color: var(--clr-rose-800);
+}
+
+.separator {
+  border: none;
+  height: 1px;
+  background-color: var(--clr-stone-150);
+}
+
+.recipe__instructions ol li::marker {
+  font-weight: var(--fw-bold);
+}
+
+.recipe__nutrition table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.recipe__nutrition td {
+  border-bottom: 1px solid var(--clr-stone-150);
+  padding-block: 12px;
+  width: 50%;
+  text-align: start;
+}
+
+.recipe__nutrition tr td:first-child {
+  padding-inline: 32px 8px;
+}
+
+.recipe__nutrition tr td:last-child {
+  color: var(--clr-brown-800);
+  font: var(--text-preset-4-bold);
+  padding-inline: 8px 32px;
+}
+
+.recipe__nutrition tr:last-child td {
+  border-bottom: none;
+}
