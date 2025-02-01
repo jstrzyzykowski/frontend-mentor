@@ -178,7 +178,7 @@ li span {
 
 @container (min-width: 768px) {
   .recipe__body {
-    padding: var(--space-500) 0;
+    padding: var(--space-500) 0 0;
   }
 }
 
