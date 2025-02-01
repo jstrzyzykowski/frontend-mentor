@@ -85,6 +85,11 @@ main {
   container-type: inline-size;
 }
 
+.container:focus {
+  outline: 2px solid var(--clr-rose-800);
+  outline-offset: 2px;
+}
+
 h2 {
   font: var(--text-preset-2);
   color: var(--clr-brown-800);
@@ -204,7 +209,7 @@ li span {
   border-radius: var(--br-12);
 }
 
-.recipe__preparationTime h3 {
+.recipe__preparationTime h2 {
   font: var(--text-preset-3);
   color: var(--clr-rose-800);
 }
