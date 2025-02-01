@@ -188,6 +188,12 @@ li span {
   color: var(--clr-stone-900);
 }
 
+@container (min-width: 768px) {
+  .recipe__header h1 {
+    font: var(--text-preset-1);
+  }
+}
+
 .recipe__header p {
   letter-spacing: var(--ls-none);
 }
