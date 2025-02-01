@@ -11,6 +11,7 @@ A collection of my solutions to Frontend Mentor challenges, built with vanilla a
 | QR Code Component | [Code](./newbie_qr-code-component) | HTML, CSS |
 | Blog Preview Card | [Code](./newbie_blog-preview-card) | HTML, CSS |
 | Social Links Profile | [Code](./newbie_social-links-profile) | HTML, CSS |
+| Recipe Page | [Code](./newbie_recipe-page) | HTML, CSS |
 
 ## How to Navigate 🗺️
 
