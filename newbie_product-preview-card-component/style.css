@@ -42,10 +42,10 @@
 
   --ls-none: 0px;
 
-  --text-preset-display: var(--fw-bold) var(--fs-32)/var(--lh-32) var(--ff-secondary);
-  --text-preset-body: var(--fw-medium) var(--fs-14)/var(--lh-23) var(--ff-primary);
-  --text-preset-button: var(--fw-bold) var(--fs-14)/var(--lh-auto) var(--ff-primary);
-  --text-preset-overline: var(--fw-medium) var(--fs-12)/var(--lh-auto) var(--ff-primary);
+  --text-preset-display: var(--fw-bold) var(--fs-32) var(--ff-secondary);
+  --text-preset-body: var(--fw-medium) var(--fs-14) var(--ff-primary);
+  --text-preset-button: var(--fw-bold) var(--fs-14) var(--ff-primary);
+  --text-preset-overline: var(--fw-medium) var(--fs-12) var(--ff-primary);
 }
 
 .visually-hidden {
@@ -145,6 +145,7 @@
 .product-preview__category {
   text-transform: uppercase;
   font: var(--text-preset-overline);
+  line-height: var(--lh-auto);
   letter-spacing: 5px;
 }
 
@@ -152,11 +153,11 @@
   font: var(--text-preset-display);
   line-height: 1;
   color: var(--clr-gunmetal);
-
 }
 
 .product-preview__description {
   font: var(--text-preset-body);
+  line-height: var(--lh-23);
   color: var(--clr-aurometal-saurus);
 }
 
@@ -169,6 +170,7 @@
 .product-preview__current-price {
   color: var(--clr-deep-aquamarine);
   font: var(--text-preset-display);
+  line-height: var(--lh-32);
 }
 
 .product-preview__original-price {
@@ -190,6 +192,7 @@
   color: var(--clr-white);
   cursor: pointer;
   transition: background-color 150ms ease;
+  line-height: var(--lh-auto);
 }
 
 .button:hover {
