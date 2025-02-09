@@ -28,7 +28,7 @@
   --clr-orange: hsl(34, 97%, 64%);
   --clr-blue: hsl(212, 86%, 64%);
   --clr-dark-blue: hsl(234, 12%, 34%);
-  --clr-dark-blue-shadow: hsla(235, 48%, 5%, 0.27);
+  --clr-dark-blue-shadow: hsla(235, 48%, 5%, 0.22);
   --clr-grayish-blue: hsl(229, 6%, 66%);
   --clr-light-gray: hsl(0, 0%, 98%);
   --clr-white: hsl(0, 0%, 100%);
@@ -39,7 +39,7 @@
   --fw-regular: 400;
   --fw-semibold: 600;
 
-  --spacing-block: 4.5rem;
+  --spacing-block: 5rem;
   --card-gap: 1.7rem;
   --letter-spacing-base: 0.1px;
   --line-height-base: 1.7;
