@@ -69,7 +69,7 @@
   padding-inline: 2rem;
   padding-block-start: var(--spacing-block);
   padding-block-end: 3rem;
-  row-gap: var(--spacing-block);
+  row-gap: 4rem;
 }
 
 .page__header {
