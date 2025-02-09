@@ -1,0 +1,206 @@
+@font-face {
+  font-family: "Poppins";
+  src: url('./assets/fonts/Poppins-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-SemiBold.ttf") format('truetype');
+  font-weight: 600;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-red: hsl(0, 78%, 62%);
+  --clr-cyan: hsl(180, 62%, 55%);
+  --clr-orange: hsl(34, 97%, 64%);
+  --clr-blue: hsl(212, 86%, 64%);
+  --clr-dark-blue: hsl(234, 12%, 34%);
+  --clr-dark-blue-shadow: hsla(234, 12%, 34%, 0.2);
+  --clr-grayish-blue: hsl(229, 6%, 66%);
+  --clr-light-gray: hsl(0, 0%, 98%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --ff-primary: "Poppins", "sans-serif";
+
+  --fw-extralight: 200;
+  --fw-regular: 400;
+  --fw-semibold: 600;
+
+  --spacing-block: 5rem;
+  --card-gap: 1.7rem;
+  --letter-spacing-base: 0.1px;
+  --line-height-base: 1.7;
+  --border-radius: 0.5rem;
+}
+
+.description,
+.card__description {
+  color: var(--clr-grayish-blue);
+  letter-spacing: var(--letter-spacing-base);
+  line-height: var(--line-height-base);
+}
+
+.page {
+  background-color: var(--clr-light-gray);
+  min-height: 100vh;
+  min-height: 100dvh;
+  font-family: var(--ff-primary);
+  color: var(--clr-dark-blue);
+  font-size: 16px;
+}
+
+.page__main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  padding-inline: 2rem;
+  padding-block: var(--spacing-block);
+  row-gap: var(--spacing-block);
+}
+
+.page__header {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  text-align: center;
+  row-gap: 1rem;
+  max-width: 540px;
+  place-self: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.title,
+.sub-title {
+  font-size: clamp(24px, 1.85vw + 17px, 36px);
+  letter-spacing: clamp(0.17px, 0.17px + 0.08vw, 0.25px);
+  line-height: 1.4;
+}
+
+.title {
+  font-weight: var(--fw-extralight);
+}
+
+.sub-title {
+  font-weight: var(--fw-semibold);
+}
+
+.description {
+  font-weight: var(--fw-regular);
+  font-size: 15px;
+}
+
+.page__section {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 1fr;
+  row-gap: var(--card-gap);
+  column-gap: var(--card-gap);
+}
+
+@media (min-width: 768px) {
+  .page__section {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .page__section {
+    grid-template-columns: repeat(3, min(100%, 350px));
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+      "cyan red blue"
+      "cyan orange blue";
+    justify-content: center;
+  }
+
+  .card--cyan {
+    grid-area: cyan;
+    align-self: center;
+  }
+
+  .card--red {
+    grid-area: red;
+  }
+
+  .card--orange {
+    grid-area: orange;
+  }
+
+  .card--blue {
+    grid-area: blue;
+    align-self: center;
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  background-color: var(--clr-white);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 14px 16px 0 var(--clr-dark-blue-shadow);
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.25rem;
+  width: 100%;
+  background-color: var(--clr-grayish-blue);
+}
+
+.card--cyan.card::before {
+  background-color: var(--clr-cyan);
+}
+
+.card--red.card::before {
+  background-color: var(--clr-red);
+}
+
+.card--orange.card::before {
+  background-color: var(--clr-orange);
+}
+
+.card--blue.card::before {
+  background-color: var(--clr-blue);
+}
+
+.card__title {
+  font-size: 20px;
+  margin-block-end: 0.2rem;
+}
+
+.card__description {
+  font-size: 13px;
+}
+
+.card__image {
+  align-self: flex-end;
+  display: block;
+  width: clamp(57px, 5vw + 10px, 64px);
+  height: clamp(57px, 5vw + 10px, 64px);
+  object-fit: cover;
+}
