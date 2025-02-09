@@ -67,7 +67,8 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
   padding-inline: 2rem;
-  padding-block: var(--spacing-block);
+  padding-block-start: var(--spacing-block);
+  padding-block-end: 3rem;
   row-gap: var(--spacing-block);
 }
 
@@ -123,7 +124,7 @@
 @media (min-width: 1200px) {
   .page__section {
     grid-template-columns: repeat(3, min(100%, 350px));
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: repeat(2, 250px);
     grid-template-areas: 
       "cyan red blue"
       "cyan orange blue";
