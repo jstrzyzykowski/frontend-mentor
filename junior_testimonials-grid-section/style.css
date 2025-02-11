@@ -42,11 +42,27 @@
   --avatar-border: 2px solid var(--clr-white-opacity-50);
 }
 
+html {
+  font-size: var(--fs-base);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .page {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
-  font-size: var(--fs-base);
   font-family: var(--ff-primary);
   min-height: 100vh;
   min-height: 100dvh;
@@ -238,12 +254,16 @@
   }
 
   .page__main {
-    gap: 1.6rem;
+    gap: 2.4rem;
     padding-inline: 0;
     padding-block: 0;
-    padding: 1.6rem;
+    padding: 2.4rem;
     grid-template-columns: repeat(4, minmax(0, 255px));
     grid-template-rows: repeat(2, auto);
+  }
+
+  .testimonial {
+    padding: 2.4rem;
   }
 
   .testimonial__content {
