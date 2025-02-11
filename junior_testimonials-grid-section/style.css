@@ -71,6 +71,12 @@ html {
 }
 
 .page__main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
@@ -188,7 +194,7 @@ html {
 }
 
 @media (min-width: 576px) {
-  .page__main {
+  .testimonials {
     grid-template-columns: repeat(2, minmax(0, 255px));
     grid-template-rows: repeat(5, 1fr);
     margin-inline: auto;
@@ -221,7 +227,7 @@ html {
 }
 
 @media (min-width: 992px) {
-  .page__main {
+  .testimonials {
     grid-template-columns: repeat(3, minmax(0, 255px));
     grid-template-rows: repeat(3, 1fr);
   }
@@ -257,7 +263,7 @@ html {
     place-items: center;
   }
 
-  .page__main {
+  .testimonials {
     gap: 2.4rem;
     padding-inline: 0;
     padding-block: 0;
