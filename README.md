@@ -15,6 +15,12 @@ A collection of my solutions to Frontend Mentor challenges, built with vanilla a
 | 5 | Product Preview Card Component | [Code](./newbie_product-preview-card-component) | newbie_product-preview-card-component | HTML, CSS |
 | 6 | Four Card Feature Section | [Code](./newbie_four-card-feature-section) | newbie_four-card-feature-section | HTML, CSS |
 
+### Junior 🌟
+
+| # | Name | Source Code | Directory | Technologies |
+|---|------|------------|-----------|--------------|
+| 1 | Testimonials Grid Section | [Code](./junior_testimonials-grid-section) | junior_testimonials-grid-section | HTML, CSS |
+
 ## How to Navigate 🗺️
 
 To view a specific project, append the project directory name to the base URL:
