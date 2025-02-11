@@ -98,7 +98,7 @@ html {
   content: "";
   position: absolute;
   top: 0;
-  right: 10%;
+  right: 15%;
   width: 104px;
   height: 102px;
   background-image: url("./assets/images/bg-pattern-quotation.svg");
@@ -179,8 +179,12 @@ html {
 
 .testimonial__quote {
   font-weight: var(--fw-medium);
-  opacity: 70%;
-  line-height: 1.5;
+  opacity: 0.7;
+  line-height: 1.4;
+}
+
+.testimonial:nth-child(1) .testimonial__quote {
+  opacity: 0.5;
 }
 
 @media (min-width: 576px) {
