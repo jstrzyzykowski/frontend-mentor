@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Meet - Group chat and video calling application for everyone"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="animations.js" defer></script>
+
+    <title>Frontend Mentor | Meet landing page</title>
+  </head>
+  <body>
+    <!-- Main page wrapper -->
+    <div class="page-wrapper">
+      <!-- Site header with logo -->
+      <header class="page-header" role="banner">
+        <a href="/" aria-label="Home">
+          <img src="./assets/logo.svg" alt="meet logo" />
+        </a>
+      </header>
+
+      <!-- Main content area -->
+      <main class="page-main">
+        <!-- Hero section with main messaging and CTA -->
+        <section class="section-hero" aria-labelledby="hero-title">
+          <!-- Hero images - responsive for different viewports -->
+          <img
+            class="section-hero__image img-fluid"
+            src="./assets/tablet/image-hero.png"
+            alt="Group of people"
+          />
+          <img
+            class="section-hero__image-left"
+            src="./assets/desktop/image-hero-left.png"
+            alt="Group of people"
+          />
+          <img
+            class="section-hero__image-right"
+            src="./assets/desktop/image-hero-right.png"
+            alt="Group of people"
+          />
+          <!-- Hero content with title and CTA buttons -->
+          <div class="section-hero__content">
+            <h1 id="hero-title" class="title title--hero">
+              <span class="title-line">Group Chat</span>
+              <span class="title-line">for Everyone</span>
+            </h1>
+            <p class="description description--slate">
+              Meet makes it easy to connect with others face-to-face virtually
+              and collaborate across any device.
+            </p>
+            <div class="button-group" role="group" aria-label="Call to action">
+              <button class="button button--cyan" type="button">
+                Download
+                <span class="version" aria-label="version 1.3">v1.3</span>
+              </button>
+              <button class="button button--purple" type="button">
+                What is it?
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Features section showcasing app capabilities -->
+        <section class="section-features" aria-labelledby="features-title">
+          <!-- Section divider with numbering -->
+          <div class="section-divider" aria-hidden="true">
+            <span class="section-number">01</span>
+          </div>
+
+          <!-- Features gallery grid -->
+          <div
+            class="features-gallery"
+            role="group"
+            aria-label="Feature preview images"
+          >
+            <figure class="feature-item">
+              <img
+                class="img-fluid"
+                src="./assets/desktop/image-woman-in-videocall.jpg"
+                alt="Woman smiling during a video call"
+                loading="lazy"
+              />
+              <figcaption class="visually-hidden">
+                Woman smiling during a video call
+              </figcaption>
+            </figure>
+            <figure class="feature-item">
+              <img
+                class="img-fluid"
+                src="./assets/desktop/image-women-videochatting.jpg"
+                alt="Group of women engaged in video chat"
+                loading="lazy"
+              />
+              <figcaption class="visually-hidden">
+                Group of women engaged in video chat
+              </figcaption>
+            </figure>
+            <figure class="feature-item">
+              <img
+                class="img-fluid"
+                src="./assets/desktop/image-men-in-meeting.jpg"
+                alt="Men participating in an online meeting"
+                loading="lazy"
+              />
+              <figcaption class="visually-hidden">
+                Men participating in an online meeting
+              </figcaption>
+            </figure>
+            <figure class="feature-item">
+              <img
+                class="img-fluid"
+                src="./assets/desktop/image-man-texting.jpg"
+                alt="Man using messaging features on his phone"
+                loading="lazy"
+              />
+              <figcaption class="visually-hidden">
+                Man using messaging features on his phone
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- Features description and benefits -->
+          <div class="features-content">
+            <div class="features-content__header">
+              <p class="overline">Built for modern use</p>
+              <h2 id="features-title" class="title title--slate">
+                Smarter meetings, all in one place
+              </h2>
+            </div>
+            <p class="description description--slate">
+              Send messages, share files, show your screen, and record your
+              meetings — all in one workspace. Control who can join with
+              invite-only team access, data encryption, and data export.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <!-- Site footer with final CTA -->
+      <footer class="page-footer" role="contentinfo">
+        <!-- Section divider with numbering -->
+        <div class="section-divider" aria-hidden="true">
+          <span class="section-number">02</span>
+        </div>
+
+        <!-- Footer content with CTA -->
+        <div class="footer-content">
+          <div class="footer-content__cta">
+            <h2 id="cta-title" class="title title--white">
+              Experience more together
+            </h2>
+            <p class="description description--white">
+              Stay connected with reliable HD meetings and unlimited one-on-one
+              and group video sessions.
+            </p>
+            <button class="button button--purple" type="button">
+              Download
+              <span class="version" aria-label="version 1.3">v1.3</span>
+            </button>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
