@@ -171,6 +171,7 @@ html {
   border-top-right-radius: var(--card-border-radius);
   overflow: hidden;
   height: 200px;
+  filter: brightness(90%);
 }
 
 .img-fluid {
@@ -461,7 +462,7 @@ html {
 
 @media (min-width: 1440px) {
   .tooltip {
-    right: calc(0px - 17%);
+    right: calc(0px - 15%);
   }
 
   .card {
@@ -478,11 +479,11 @@ html {
 
   .card__text-wrapper {
     padding-block-start: var(--space-400);
-    padding-inline: var(--space-400);
+    padding-inline: var(--space-500);
   }
 
   .card__footer {
-    padding-inline: var(--space-400);
+    padding-inline: var(--space-500);
     padding-block-end: var(--space-400);
     padding-block-start: 0;
   }
