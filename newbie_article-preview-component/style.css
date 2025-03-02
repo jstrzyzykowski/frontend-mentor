@@ -171,7 +171,6 @@ html {
   border-top-right-radius: var(--card-border-radius);
   overflow: hidden;
   height: 200px;
-  filter: brightness(98%);
 }
 
 .img-fluid {
