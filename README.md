@@ -15,6 +15,7 @@ A collection of my solutions to Frontend Mentor challenges, built with vanilla a
 | 5 | Product Preview Card Component | [Code](./newbie_product-preview-card-component) | newbie_product-preview-card-component | HTML, CSS |
 | 6 | Four Card Feature Section | [Code](./newbie_four-card-feature-section) | newbie_four-card-feature-section | HTML, CSS |
 | 7 | Meet Landing Page | [Code](./newbie_meet-landing-page) | newbie_meet-landing-page | HTML, CSS, JS |
+| 8 | Article Preview Component | [Code](./newbie_article-preview-component) | newbie_article-preview-component | HTML, CSS, JS |
 
 ### Junior 🌟
 
